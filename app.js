@@ -1,17 +1,3 @@
-const myTodos = [
-  {
-    title: "party",
-    description: "welcome the guests",
-    dueDate: "today",
-    priority: "important",
-  },
-  {
-    title: "cleaning",
-    description: "clean the bathroom",
-    dueDate: "before the party",
-    priority: "regular",
-  },
-];
 
 class Todos {
   constructor(title, description, dueDate, priority) {
@@ -26,18 +12,35 @@ class Todos {
   // }
 }
 
+const myTodos = [
+  {
+    title: "party",
+    description: "welcome the guests",
+    dueDate: "today",
+    priority: "important",
+  },
+  {
+    title: "cleaning",
+    description: "clean the bathroom",
+    dueDate: "before the party",
+    priority: "regular",
+  },
+];
 function renderTodos() {
   const tableRow = document.querySelector(".insert-task");
-  tableRow.innerHTML = `
-  <th>${myTodos[0].title}</th>
-  <td>${myTodos[0].description}</td>
-  <td>${myTodos[0].dueDate}</td>
-  <td>${myTodos[0].priority}</td>
-  <th>${myTodos[1].title}</th>
-  <td>${myTodos[1].description}</td>
-  <td>${myTodos[1].dueDate}</td>
-  <td>${myTodos[1].priority}</td>
-  `
+
+  myTodos.forEach(todo => {
+    console.log(todo);
+    tableRow.innerHTML += `
+    <tr>
+    <th>${todo.title}</th>
+    <td>${todo.description}</td>
+    <td>${todo.dueDate}</td>
+    <td>${todo.priority}</td>
+    </tr>
+    `
+
+  })
 }
 
 renderTodos()
