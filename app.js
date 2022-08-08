@@ -6,8 +6,7 @@ class Todos {
     this.priority = priority;
   }
 
-  addTodos() {
-    const todo = new Todos(this.title, this.description, this.dueDate, this.priority)
+  static addTodos(todo) {
     UI.renderTodos(todo);
   }
 }
@@ -16,23 +15,28 @@ class UI {
   static renderTodos(todos) {
     const tableRow = document.querySelector(".insert-task");
 
-    todos.forEach(todo => {
-      tableRow.innerHTML += `
-      <tr>
-      <td>${todo.title}</td>
-      <td>${todo.description}</td>
-      <td>${todo.dueDate}</td>
-      <td>${todo.priority}</td>
-      </tr>
-      `
-    })
-
+    tableRow.innerHTML += `
+    <tr>
+    <td>${todos.title}</td>
+    <td>${todos.description}</td>
+    <td>${todos.dueDate}</td>
+    <td>${todos.priority}</td>
+    </tr>
+    `
   }
 }
 
-const createTodoButton = document.querySelector(".create-task");
-createTodoButton.addEventListener("click", () => {
-  Todos.addTodos()
+const createTodoButton = document.querySelector("#create-todo");
+
+createTodoButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  const title = document.querySelector("#title");
+  const description = document.querySelector("#description");
+  const dueDate = document.querySelector("#due-date");
+  const priority = document.querySelector("#priority");
+  console.log(title.value);
+  const todo = new Todos(title.value, description.value, dueDate.value, priority.value)
+  Todos.addTodos(todo)
 })
 
 
