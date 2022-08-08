@@ -9,15 +9,28 @@
     <script src="./app.js" defer></script>
   </head>
   <body>
-    <h1>Todos App</h1>
-    <button class="create-todo">New Task</button>
-    <table class="insert-task">
-      <tr>
-        <th>Title</th>
-        <th>Description</th>
-        <th>Time</th>
-        <th>Priority</th>
-      </tr>
-    </table>
+    <main class="container">
+      <h1>Todos App</h1>
+      <form action="" class="todo-form">
+        <label for="title">title</label>
+        <input type="text" id="title" />
+        <label for="description">description</label>
+        <input type="text" id="description" />
+        <label for="due-date">time due</label>
+        <input type="text" id="due-date" />
+        <label for="priority">priority</label>
+        <input type="text" id="priority">
+        <label for="create-todo">new task</label>
+        <input type="submit" id="create-todo" />
+      </form>
+      <table class="insert-task">
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Time</th>
+          <th>Priority</th>
+        </tr>
+      </table>
+    </main>
   </body>
 </html>

@@ -1,0 +1,16 @@
+body{
+  display: grid;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.container {
+  max-width: 80vw;
+}
+
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
