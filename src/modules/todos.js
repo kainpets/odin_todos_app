@@ -5,9 +5,5 @@ export class Todos {
     this.dueDate = dueDate;
     this.priority = priority;
   }
-
-  static addTodos(todo) {
-    UI.renderTodos(todo);
-  }
 }
 
