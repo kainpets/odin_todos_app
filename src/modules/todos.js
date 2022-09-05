@@ -1,9 +1,10 @@
-export class Todos {
+import { Projects } from "./projects";
+
+export class Todos extends Projects {
   constructor(title, description, dueDate, priority) {
-    this.title = title;
+    super(title);
     this.description = description;
     this.dueDate = dueDate;
     this.priority = priority;
   }
 }
-
