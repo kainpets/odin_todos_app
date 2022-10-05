@@ -7,44 +7,57 @@
     <title>Todos App</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="./main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/e3f0a02853.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/e3f0a02853.js" crossorigin="anonymous"></script> 
-<main class="container">
-  <header class="header">
-      <h1>Todos App</h1>
-   <i class="fa-solid fa-list-check"></i>
-  </header>
-  <div class="projects-tasks">
-      <form action="" class="todo-form">
-        <label for="project-title">project title</label>
-        <input type="text" id="title" value="default" />
-        <label for="title">task</label>
-        <input type="text" id="title" />
-        <label for="description">description</label>
-        <input type="text" id="description" />
-        <label for="due-date">time due</label>
-        <input type="date" id="due-date" />
-        <label for="priority">priority</label>
-        <input list="set-priority" id="priority">
-        <datalist id="set-priority">
-          <option value="low">
-          <option value="high">
-        </datalist>
-        <input class=""type="submit" id="create-todo" value="create new task"/>
-      </form>
-      <table class="rendered-tasks-form">
-        <tr>
-          <th>Project's title</th>
-          <th>Task</th>
-          <th>Description</th>
-          <th>Time</th>
-          <th>Priority</th>
-        </tr>
-      </table>
-  </div>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>Todos App</h1>
+        <i class="fa-solid fa-list-check"></i>
+      </header>
+      <div class="projects-tasks">
+        <form action="" class="todo-form">
+          <label for="project-title">project title</label>
+          <input type="text" id="title" value="default" />
+          <label for="title">task</label>
+          <input type="text" id="title" />
+          <label for="description">description</label>
+          <input type="text" id="description" />
+          <label for="due-date">time due</label>
+          <input type="date" id="due-date" />
+          <label for="priority">priority</label>
+          <input list="set-priority" id="priority" />
+          <datalist id="set-priority">
+            <option value="low"></option>
+            <option value="high"></option>
+          </datalist>
+
+          <input
+            class=""
+            type="submit"
+            id="create-todo"
+            value="create new task"
+          />
+        </form>
+        <table class="rendered-tasks-form">
+          <tr class="insert-task">
+            <th>Project's title</th>
+            <th>Task</th>
+            <th>Description</th>
+            <th>Time</th>
+            <th>Priority</th>
+          </tr>
+        </table>
+      </div>
     </main>
   </body>
 </html>
